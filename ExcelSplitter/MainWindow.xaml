@@ -1,0 +1,33 @@
+﻿<Window x:Class="ExcelSplitter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Excel Splitter" Height="397.6" Width="536.52">
+    <Grid Margin="0,0,0,1">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="156" Margin="10,10,0,0" VerticalAlignment="Top" Width="509">
+            <Label Content="Input File:" HorizontalAlignment="Left" Height="27" Margin="-1,13,0,0" VerticalAlignment="Top" Width="75"/>
+        </Border>
+        <TextBox x:Name="FileNameTxtBox" HorizontalAlignment="Left" Height="23" Margin="151,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="274" TextChanged="FileNameTxtBox_TextChanged"/>
+        <Button x:Name="FileBtn" Content="..." HorizontalAlignment="Left" Margin="447,28,0,0" VerticalAlignment="Top" Width="39" Click="Button_Click" Height="23"/>
+        <Label Content="Number of Rows:" HorizontalAlignment="Left" Margin="10,129,0,0" VerticalAlignment="Top" Width="116"/>
+        <TextBox x:Name="RowsTxtBox" HorizontalAlignment="Left" Height="23" Margin="151,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+        <Label Content="Number of Columns:" HorizontalAlignment="Left" Margin="276,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.481,-3.577" Width="128"/>
+        <TextBox x:Name="ColumnsTxtBox" HorizontalAlignment="Left" Height="23" Margin="408,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="78" RenderTransformOrigin="4.388,0.696" />
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="10,171,0,0" VerticalAlignment="Top" Width="509">
+            <Label Content="Output Directory:" HorizontalAlignment="Left" Height="27" Margin="-1,15,0,0" VerticalAlignment="Top" Width="105"/>
+        </Border>
+        <Label Content="Select a Spreadsheet:" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Width="136"/>
+        <ComboBox x:Name="TableSelectComboBox" HorizontalAlignment="Left" Margin="151,63,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.55,0.545" SelectionChanged="TableSelectComboBox_SelectionChanged"/>
+        <Button x:Name="ProcessBtn" Content="Process" HorizontalAlignment="Left" Margin="444,286,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <TextBox IsEnabled="False" x:Name="OutDirTxtBox" HorizontalAlignment="Left" Height="23" Margin="178,188,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168" RenderTransformOrigin="0.482,-0.2"/>
+        <Button x:Name="FileBtn_Copy" Content="..." HorizontalAlignment="Left" Margin="401,188,0,0" VerticalAlignment="Top" Width="39" Click="Button_Click_Outdir" Height="23" RenderTransformOrigin="0.595,2.6"/>
+        <Label Content="Output File Name:" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="24" Width="128"/>
+        <TextBox x:Name="OutFileNameTxtBox" HorizontalAlignment="Left" Height="23" Margin="178,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168"/>
+        <Label Content="Output Column Multiplier:" HorizontalAlignment="Left" Margin="10,242,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DivideFactor" HorizontalAlignment="Left" Height="23" Margin="178,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="168"/>
+        <CheckBox x:Name="sortedCheckBox"  Content="Keep Sorted" HorizontalAlignment="Left" Margin="401,248,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+        <ComboBox x:Name="TableSelectComboBoxHeaderRow" HorizontalAlignment="Left" Margin="409,96,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="1.55,0.545" SelectionChanged="TableSelectComboBoxHeaderRow_SelectionChanged"/>
+        <Label Content="Header Row Location:" HorizontalAlignment="Left" Margin="276,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.481,-3.577" Width="128"/>
+        <Label Content="Blank Row Location:" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Width="116"/>
+        <ComboBox x:Name="BlankRowSelectionComboBox" HorizontalAlignment="Left" Margin="151,96,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="1.55,0.545" SelectionChanged="BlankRowSelectionComboBox_SelectionChanged"/>
+    </Grid>
+</Window>
